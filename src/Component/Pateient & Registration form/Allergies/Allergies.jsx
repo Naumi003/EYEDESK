@@ -12,13 +12,19 @@ function Allergies() {
   });
 
   return (
-    <Box sx={{ borderRight: "1px solid black" }}>
-      <Box sx={{ paddingX: "1rem", marginTop: "15px", marginBottom: "15px" }}>
-       <Drug/>
-        {/* //   ---------{second container}//// */}
-       <Contact/>
-        {/* Third container */}
-        <Food/>
+    <Box sx={{  }}>
+      <Box sx={{ paddingX: "1rem", paddingTop: "1rem", marginBottom: "15px" }}>
+        <div
+          style={{
+            padding: "1rem",
+          }}
+        >
+          {/* //   ---------{second container}//// */}
+          <Drug />
+          {/* Third container */}
+          <Contact />
+          <Food />
+        </div>
       </Box>
     </Box>
   );

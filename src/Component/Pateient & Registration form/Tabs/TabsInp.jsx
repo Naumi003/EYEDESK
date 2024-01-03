@@ -9,7 +9,7 @@ import { buttonClasses } from "@mui/base/Button";
 import { Tab as BaseTab, tabClasses } from "@mui/base/Tab";
 // import Pateint from "./componentfolder/componene/Pateint";
 import Pateint from "../Pateient/pateint";
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import Appointment from "../Appointment/Appointment";
 import Card from "@mui/material";
@@ -18,6 +18,7 @@ import theme from "../../../theme";
 import Othedetails from "../OtherDetails/Othedetails";
 import History from "../History/History";
 import Allergies from "../Allergies/Allergies";
+import Navigation from "../Navigation/Navigation";
 
 function App() {
   const white = {
@@ -97,7 +98,7 @@ function App() {
 
   return (
     <>
-      <Box sx={{ paddingX: "1rem" }}>
+      <Box sx={{ paddingX: "1rem", marginX: "0.5rem" }}>
         <ThemeProvider theme={theme}>
           <div className="App">
             <h1>Patient Registration & Appointment Form</h1>
@@ -106,68 +107,41 @@ function App() {
           <Grid
             container
             style={{
-              backgroundColor: "#D9D9D9",
-              border: "1px solid black",
+              backgroundColor: "#F5F5F5",
+              border: "1px solid gray",
+              // paddingTop: "-10px",
               position: "relative",
               height: "auto",
               // padding: "0px 35px",
             }}
           >
-            <Grid style={{ height: "100%" }} item xs={12} sm={7}>
-              <Tabs defaultValue={1}>
-                <TabsList
-                  style={{
-                    // fontSize:"14px",
-                    borderBottom: "1px solid black",
-                    // height: "50px",
-                    height: "50px",
-                    display: "flex",
-                    // justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <Tab
-                    value={1}
-                    sx={{ fontSize: { md: "10px", sm: "0.50rem" } }}
-                  >
-                    Pateient Details
-                  </Tab>
-                  <Tab value={2} sx={{ fontSize: "10px" }}>
-                    Other Details
-                  </Tab>
-                  <Tab value={3} sx={{ fontSize: "10px" }}>
-                    History
-                  </Tab>
-                  <Tab value={4} sx={{ fontSize: "10px" }}>
-                    Allergies
-                  </Tab>
-                </TabsList>
-                <TabPanel value={1}>
-                  <Pateint />
-                </TabPanel>
-                <TabPanel value={2}>
-                  <Othedetails />
-                </TabPanel>
-                <TabPanel value={3}>
-                  <History />
-                </TabPanel>
-                <TabPanel value={4}>
-                  <Allergies />
-                </TabPanel>
-              </Tabs>
+            <Grid style={{ height: "100%" }} item md={7} sm={7}>
+              <Navigation />
             </Grid>
-            <Grid item sm={5}>
+            <Grid
+              item
+              md={5}
+              sm={5}
+              sx={{
+                borderLeft: "1px solid gray",
+              }}
+            >
               <Box
                 sx={{
-                  borderBottom: "1px solid black",
-                  borderLeft: "1px solid black",
-                  height: "50px",
+                  borderBottom: "1px solid gray",
+                   height: "48.5px",
                   // paddingLeft:"150px",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  fontSize: "10px",
+                  fontSize: "0.900rem",
                   fontWeight: "700",
+                  letterSpacing: "0.02857em",
+                  display: "flex",
+                  justifyContent: "center",
+                  // color: "#00000099",
+                  width: "100%",
+                  color: "#373737",
                 }}
               >
                 Appointment Details

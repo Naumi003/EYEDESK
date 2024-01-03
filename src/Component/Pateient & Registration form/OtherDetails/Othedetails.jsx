@@ -61,10 +61,10 @@ function Othedetails() {
     );
   };
   return (
-    <Box sx={{ borderRight: "1px solid black" }}>
+    <Box sx={{}}>
       <Grid
         container
-        // style={{ borderRight: "1px solid black" }}
+        style={{}}
         // marginTop={"1rem"}
         // rowSpacing={"1rem"}
         paddingY={"1rem"}
@@ -74,11 +74,13 @@ function Othedetails() {
           <Typography
             component="h4"
             sx={{
-              fontSize: "16px",
+              fontSize: "14px",
               marginBottom: "10px",
+              fontWeight: 600,
+              color: "#373737",
             }}
           >
-            Pateient Image
+            Patient Image
           </Typography>
           <Stack sx={{ width: "130px", height: "150px" }}>
             <Paper sx={{ width: "100%", height: "100%", padding: "0.8rem" }}>
@@ -90,7 +92,9 @@ function Othedetails() {
           <Typography
             component="h4"
             sx={{
-              fontSize: "16px",
+              fontSize: "14px",
+              fontWeight: 600,
+              color: "#373737",
             }}
           >
             Blood Group
@@ -105,7 +109,9 @@ function Othedetails() {
           <Typography
             component="h4"
             sx={{
-              fontSize: "16px",
+              fontSize: "14px",
+              fontWeight: 600,
+              color: "#373737",
             }}
           >
             Martial Status
@@ -134,7 +140,9 @@ function Othedetails() {
           <Typography
             component="h4"
             sx={{
-              fontSize: "16px",
+              fontSize: "14px",
+              fontWeight: 600,
+              color: "#373737",
             }}
           >
             One Eyed
@@ -159,9 +167,10 @@ function Othedetails() {
       <Typography
         component="h4"
         sx={{
-          fontSize: "16px",
           paddingLeft: "1rem",
-          //   paddingX="1rem",
+          fontSize: "14px",
+          fontWeight: 600,
+          color: "#373737",
         }}
       >
         Emergency Contact

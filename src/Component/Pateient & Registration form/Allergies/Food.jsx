@@ -13,6 +13,9 @@ function Food() {
         component="h4"
         sx={{
           fontSize: { md: "0.75rem", sm: "0.50rem" },
+          // fontSize: "14px",
+          fontWeight: 600,
+          color: "#373737",
           marginBottom: "5px",
           marginTop: "25px",
           // height:"35px"

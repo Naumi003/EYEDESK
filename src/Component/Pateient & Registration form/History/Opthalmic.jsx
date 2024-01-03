@@ -13,8 +13,11 @@ function Opthalmic() {
       <Typography
         component="h4"
         sx={{
-          fontSize: "16px",
+          // fontSize: "16px",
           marginBottom: "5px",
+          fontSize: "14px",
+          fontWeight: 600,
+          color: "#373737",
         }}
       >
         Opthalmic History

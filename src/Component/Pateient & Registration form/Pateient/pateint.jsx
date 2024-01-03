@@ -73,12 +73,11 @@ function Pateint() {
           style={{
             // height: "89%",
             minHeight: "auto",
-            borderRight: "1px solid black",
-            borderTop: "0px solid black",
+            // borderRight: "1px solid black",
+            // borderTop: "1px solid black",
           }}
         >
           <Grid container>
-           
             <Grid container spacing={3} sx={{ px: "10px", paddingY: "1rem" }}>
               <Grid item sx={4} xs={12} sm={12} md={4} lg={4}>
                 <TextField
@@ -114,7 +113,7 @@ function Pateint() {
             {/* <Typography
               component="h4"
               sx={{
-                fontSize: "16px",
+                fontSize: "14px",
                 position: "relative",
                 left: "10px",
                 marginTop: "5PX",
@@ -161,11 +160,14 @@ function Pateint() {
               <Typography
                 component="h4"
                 sx={{
-                  fontSize: "16px",
+                  fontSize: "14px",
                   position: "relative",
-                  left: "10px",
+                  // left: "10px",
                   marginTop: "5PX",
-                  marginBottom: "5px",
+                  // marginBottom: "5px",
+                  // color: "#00000099",
+                  fontWeight: 600,
+                  color: "#373737",
                 }}
               >
                 Gender
@@ -200,11 +202,14 @@ function Pateint() {
               <Typography
                 component="h4"
                 sx={{
-                  fontSize: "16px",
+                  fontSize: "14px",
                   position: "relative",
-                  left: "10px",
+                  // left: "10px",
                   marginTop: "5PX",
                   marginBottom: "5px",
+                  fontWeight: 600,
+                  color: "#373737",
+                  // color: "#00000099",
                 }}
               >
                 D.O.B
@@ -225,15 +230,18 @@ function Pateint() {
               <Typography
                 component="h4"
                 sx={{
-                  fontSize: "16px",
+                  fontSize: "14px",
                   position: "relative",
-                  left: "10px",
+                  // left: "10px",
                   marginTop: "3PX",
                   // marginBottom: "2px",
                   size: "small",
+                  // color: "#00000099",
+                  fontWeight: 600,
+                  color: "#373737",
                 }}
               >
-                Pateient Type
+                Patient Type
               </Typography>
               <FormControl sx={{ mt: 1, width: "100%" }}>
                 <InputLabel id="demo-multiple-name-label" size="small">
@@ -273,11 +281,14 @@ function Pateint() {
               <Typography
                 component="h4"
                 sx={{
-                  fontSize: "16px",
+                  fontSize: "14px",
                   position: "relative",
-                  left: "10px",
+                  // left: "10px",
                   marginTop: "5PX",
                   marginBottom: "5px",
+                  // color: "#00000099",
+                  fontWeight: 600,
+                  color: "#373737",
                 }}
               >
                 Address
@@ -311,12 +322,15 @@ function Pateint() {
               <Typography
                 component="h4"
                 sx={{
-                  fontSize: "16px",
+                  fontSize: "14px",
 
                   left: "10px",
                   marginTop: "10PX",
                   lineHeight: "",
-                  // marginBottom: "5px",
+                  marginBottom: "4px",
+                  // color: "#00000099",
+                  fontWeight: 600,
+                  color: "#373737",
                 }}
               >
                 Occupation
@@ -360,7 +374,11 @@ function Pateint() {
                   State
                 </InputLabel>
                 <Select
-                  sx={{ backgroundColor: "white", borderRadius: "0.7rem" }}
+                  sx={{
+                    backgroundColor: "white",
+                    borderRadius: "0.7rem",
+                    color: "#00000099",
+                  }}
                   labelId="demo-multiple-name-label "
                   id="demo-multiple-name"
                   multiple

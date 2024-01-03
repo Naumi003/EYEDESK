@@ -72,9 +72,11 @@ const Appointment = () => {
         sx={{
           fontSize: "14px",
           position: "relative",
-          left: "10px",
+          left: "8px",
           marginTop: "5PX",
           marginBottom: "5px",
+          fontWeight: 600,
+          color: "#373737",
         }}
       >
         Type
@@ -90,7 +92,11 @@ const Appointment = () => {
               // size="small"
             >
               <Grid container>
-                <Grid item sx={{ position: "relative", left: "10px" }} lg={6}>
+                <Grid
+                  item
+                  sx={{ position: "relative", left: "10px", marginTop: "-5px" }}
+                  lg={6}
+                >
                   <FormControlLabel
                     value="female"
                     control={<Radio />}
@@ -98,7 +104,7 @@ const Appointment = () => {
                     // size="small"
                   />
                 </Grid>
-                <Grid item sx={6} lg={6}>
+                <Grid item xs={6} lg={6} sx={{ marginTop: "-5px" }}>
                   <FormControlLabel
                     value="other"
                     control={<Radio />}
@@ -115,10 +121,12 @@ const Appointment = () => {
         component="h4"
         sx={{
           fontSize: "14px",
+          fontWeight: 600,
           position: "relative",
-          left: "10px",
+          left: "9px",
           marginTop: "5PX",
           marginBottom: "5px",
+          color: "#373737",
         }}
       >
         Appointment Date And Time
@@ -145,16 +153,23 @@ const Appointment = () => {
           </LocalizationProvider>
         </Grid>
       </Grid>
-      <Grid container columnSpacing={1} paddingX={1}>
+      <Grid
+        container
+        columnSpacing={1}
+        paddingX={1}
+        sx={{ marginTop: "5PX", marginBottom: "5px" }}
+      >
         <Grid item xs={12} sm={6}>
           <Typography
             component="h4"
             sx={{
               fontSize: "14px",
               position: "relative",
-              left: "10px",
+              left: "5px",
               marginTop: "5PX",
               marginBottom: "5px",
+              color: "#373737",
+              fontWeight: 600,
             }}
           >
             Location
@@ -193,9 +208,11 @@ const Appointment = () => {
             sx={{
               fontSize: "14px",
               position: "relative",
-              left: "10px",
+              left: "5px",
               marginTop: "5PX",
               marginBottom: "5px",
+              fontWeight: 600,
+              color: "#373737",
             }}
           >
             Consultant
@@ -228,16 +245,23 @@ const Appointment = () => {
           </FormControl>
         </Grid>
       </Grid>
-      <Grid container columnSpacing={1} paddingX={1}>
+      <Grid
+        container
+        columnSpacing={1}
+        paddingX={1}
+        sx={{ marginTop: "5PX", marginBottom: "5px" }}
+      >
         <Grid item xs={12} sm={6}>
           <Typography
             component="h4"
             sx={{
               fontSize: "14px",
               position: "relative",
-              left: "10px",
+              left: "5px",
               marginTop: "5PX",
               marginBottom: "5px",
+              color: "#373737",
+              fontWeight: 600,
             }}
           >
             Appointment Types
@@ -276,9 +300,11 @@ const Appointment = () => {
             sx={{
               fontSize: "12px",
               position: "relative",
-              left: "10px",
+              left: "5px",
               marginTop: "5PX",
               marginBottom: "5px",
+              color: "#373737",
+              fontWeight: 600,
             }}
           >
             Appointment Categories
@@ -312,8 +338,8 @@ const Appointment = () => {
         </Grid>
       </Grid>
       <Grid container>
-        <Grid item xs={12}>
-          <h4 className="naumi">Reserved Slot For 26 Aug,2023</h4>
+        <Grid item xs={12} >
+          <h4 className="naumi" >Reserved Slot For 26 Aug,2023</h4>
         </Grid>
       </Grid>
     </div>

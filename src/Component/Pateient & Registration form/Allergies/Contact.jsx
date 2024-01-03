@@ -12,7 +12,9 @@ function Contact() {
       <Typography
         component="h4"
         sx={{
-          fontSize: "16px",
+          fontSize: "14px",
+          fontWeight: 600,
+          color: "#373737",
           // marginBottom: "5px",
           marginTop: "25px",
         }}
