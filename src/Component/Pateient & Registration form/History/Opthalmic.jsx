@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Box, Grid, TextField, Typography } from "@mui/material";
+import Button from "./Button";
 
 function Opthalmic() {
   const [input, setInput] = useState({
@@ -26,14 +27,16 @@ function Opthalmic() {
         container
         sx={{
           border: "1px solid gray",
-          textAlign: "center",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          // textAlign: "center",
+          // display: "flex",
+          // alignItems: "center",
+          // justifyContent: "center",
+          
           backgroundColor: "white",
         }}
+        // spacing={"0.1rem"}
       >
-        <Grid
+        {/* <Grid
           item
           md={1}
           sm={1.71}
@@ -187,7 +190,8 @@ function Opthalmic() {
           }}
         >
           Retinal Laser
-        </Grid>
+        </Grid> */}
+        <Button/>
       </Grid>
       <Box
         sx={{
@@ -201,7 +205,7 @@ function Opthalmic() {
           fullWidth
           label="History Comment"
           size="large"
-          sx={{ backgroundColor: "white", borderRadius: "10px" }}
+          sx={{ backgroundColor: "white" }}
         />
       </Box>
     </>
