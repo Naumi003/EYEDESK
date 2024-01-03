@@ -4,20 +4,8 @@ import React, { useState } from "react";
 import ButtonComp from "../../ButtonComp";
 // import ButtonComp from "../MiniComp/ButtonComp";
 
-function Button() {
-  //   const [value, setValue] = useState("");
-  //   const start = 0.0;
-  //   const end = 25.0;
-  //   const increment = 0.25;
-  //   const numbersArray = [];
+export function OpthalmicButton() {
 
-  //   for (let i = start; i <= end; i += increment) {
-  //     numbersArray.push("+" + i.toFixed(2));
-  //   }
-
-  //   const onSet = (params) => {
-  //     setValue(params);
-  //   };
   const Array = [
     "Glaucoma",
     "Retinal Detachment",
@@ -27,26 +15,122 @@ function Button() {
     "Uveitis",
     "Retinal Laser",
   ];
-  //   console.log(value);
 
   return (
     <>
-      {/* <Grid container spacing={"0.1rem"}> */}
       {Array.map((key, i) => {
         return (
-          <Grid item md={2} key={i}>
+          <Grid item key={i}>
             <ButtonComp
-              width={"100%"}
-              // onClick={() => onSet(key)}
+              width={"auto"}
+              fontSize="10px"
               label={key}
               color={"black"}
             />
           </Grid>
         );
       })}
-      {/* </Grid> */}
     </>
   );
 }
 
-export default Button;
+export function SystemicButton() {
+
+  const Array = [
+    "Diabetes",
+    "Hypertension",
+    "Alcoholism",
+    "Smoking Tobacco",
+    "Cardiac Disorder",
+    "Drug Abuse",
+    "HIV/AIDS",
+    "Cancer Tumor",
+    "Tuberculosis",
+    "Asthma",
+    "CNS Disorder Stroke",
+    "Hypothyroidism",
+    "Hepatitis Cirrhosis",
+    "Renal Disorder",
+    "Acidity",
+    "On Insulin",
+    "On Aspirin Blood Thinners",
+    "Consanguinity",
+    "Thyroid Disorder",
+    "Chewing Tobacco",
+    "Rheumatoid Arthritis",
+    "Benign Prostatic Hyperplasia ( BPH )"
+  ];
+
+  return (
+    <>
+      {Array.map((key, i) => {
+        return (
+          <Grid item key={i} sx={{ marginTop: "0.05rem" }}>
+            <ButtonComp
+              width={"auto"}
+              fontSize="10px"
+              label={key}
+              color={"black"}
+            />
+          </Grid >
+        );
+      })}
+    </>
+  );
+}
+
+export function NutritionalButton() {
+
+  const Array = [
+    "Malnourished",
+    "Well Nourished",
+    "Over Weight",
+    "Obese"
+  ];
+
+  return (
+    <>
+      {Array.map((key, i) => {
+        return (
+          <Grid item key={i} sx={{ marginTop: "0.05rem" }}>
+            <ButtonComp
+              width={"auto"}
+              fontSize="10px"
+              label={key}
+              color={"black"}
+            />
+          </Grid >
+        );
+      })}
+    </>
+  );
+}
+
+
+export function ImmunizationButton() {
+
+  const Array = [
+    "Complete",
+    "Pending"
+  ];
+
+  return (
+    <>
+      {Array.map((key, i) => {
+        return (
+          <Grid item key={i} sx={{ marginTop: "0.05rem" }}>
+            <ButtonComp
+              width={"auto"}
+              fontSize="10px"
+              label={key}
+              color={"black"}
+            />
+          </Grid >
+        );
+      })}
+    </>
+  );
+}
+
+
+
