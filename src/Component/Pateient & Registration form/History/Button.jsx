@@ -5,7 +5,6 @@ import ButtonComp from "../../ButtonComp";
 // import ButtonComp from "../MiniComp/ButtonComp";
 
 export function OpthalmicButton() {
-
   const Array = [
     "Glaucoma",
     "Retinal Detachment",
@@ -22,10 +21,17 @@ export function OpthalmicButton() {
         return (
           <Grid item key={i}>
             <ButtonComp
-              width={"auto"}
-              fontSize="10px"
+              sx={{
+                width: "auto",
+                fontSize: "10px",
+                height: "100%",
+                bgcolor: "white",
+                color: "black",
+                borderRadius: "0%",
+                border: "1px solid gray",
+              }}
               label={key}
-              color={"black"}
+              // onClick=
             />
           </Grid>
         );
@@ -35,7 +41,6 @@ export function OpthalmicButton() {
 }
 
 export function SystemicButton() {
-
   const Array = [
     "Diabetes",
     "Hypertension",
@@ -58,7 +63,7 @@ export function SystemicButton() {
     "Thyroid Disorder",
     "Chewing Tobacco",
     "Rheumatoid Arthritis",
-    "Benign Prostatic Hyperplasia ( BPH )"
+    "Benign Prostatic Hyperplasia ( BPH )",
   ];
 
   return (
@@ -67,12 +72,18 @@ export function SystemicButton() {
         return (
           <Grid item key={i} sx={{ marginTop: "0.05rem" }}>
             <ButtonComp
-              width={"auto"}
-              fontSize="10px"
+              sx={{
+                width: "auto",
+                fontSize: "10px",
+                height: "100%",
+                bgcolor: "white",
+                color: "black",
+                borderRadius: "0%",
+                border: "1px solid gray",
+              }}
               label={key}
-              color={"black"}
             />
-          </Grid >
+          </Grid>
         );
       })}
     </>
@@ -80,13 +91,7 @@ export function SystemicButton() {
 }
 
 export function NutritionalButton() {
-
-  const Array = [
-    "Malnourished",
-    "Well Nourished",
-    "Over Weight",
-    "Obese"
-  ];
+  const Array = ["Malnourished", "Well Nourished", "Over Weight", "Obese"];
 
   return (
     <>
@@ -94,25 +99,26 @@ export function NutritionalButton() {
         return (
           <Grid item key={i} sx={{ marginTop: "0.05rem" }}>
             <ButtonComp
-              width={"auto"}
-              fontSize="10px"
+              sx={{
+                width: "auto",
+                fontSize: "10px",
+                height: "100%",
+                bgcolor: "white",
+                color: "black",
+                borderRadius: "0%",
+                border: "1px solid gray",
+              }}
               label={key}
-              color={"black"}
             />
-          </Grid >
+          </Grid>
         );
       })}
     </>
   );
 }
-
 
 export function ImmunizationButton() {
-
-  const Array = [
-    "Complete",
-    "Pending"
-  ];
+  const Array = ["Complete", "Pending"];
 
   return (
     <>
@@ -120,17 +126,20 @@ export function ImmunizationButton() {
         return (
           <Grid item key={i} sx={{ marginTop: "0.05rem" }}>
             <ButtonComp
-              width={"auto"}
-              fontSize="10px"
+              sx={{
+                width: "auto",
+                fontSize: "10px",
+                height: "100%",
+                bgcolor: "white",
+                color: "black",
+                borderRadius: "0%",
+                border: "1px solid gray",
+              }}
               label={key}
-              color={"black"}
             />
-          </Grid >
+          </Grid>
         );
       })}
     </>
   );
 }
-
-
-

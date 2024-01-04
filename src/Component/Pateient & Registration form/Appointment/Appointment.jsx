@@ -73,11 +73,13 @@ const Appointment = () => {
           fontSize: "14px",
           position: "relative",
           left: "8px",
+          // minWidth: "2rem",
           marginTop: "5PX",
           marginBottom: "5px",
           fontWeight: 600,
           color: "#373737",
         }}
+        width={"10rem"}
       >
         Type
       </Typography>
@@ -124,10 +126,12 @@ const Appointment = () => {
           fontWeight: 600,
           position: "relative",
           left: "9px",
+          // minWidth: "2rem",
           marginTop: "5PX",
           marginBottom: "5px",
           color: "#373737",
         }}
+        width={"20rem"}
       >
         Appointment Date And Time
       </Typography>
@@ -338,8 +342,8 @@ const Appointment = () => {
         </Grid>
       </Grid>
       <Grid container>
-        <Grid item xs={12} >
-          <h4 className="naumi" >Reserved Slot For 26 Aug,2023</h4>
+        <Grid item xs={12}>
+          <h4 className="naumi">Reserved Slot For 26 Aug,2023</h4>
         </Grid>
       </Grid>
     </div>

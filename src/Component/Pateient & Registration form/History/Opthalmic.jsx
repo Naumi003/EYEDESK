@@ -26,11 +26,11 @@ function Opthalmic() {
       <Grid
         container
         sx={{
-          height: "100%",
+          height: "auto",
+          minHeight: "2.5rem",
           // backgroundColor: "white",
         }}
       >
-
         <OpthalmicButton />
       </Grid>
       <Box

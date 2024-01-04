@@ -23,12 +23,15 @@ function Paeditric() {
         >
           Paediatric History
         </Typography>
-        <Grid container sx={{ marginTop: "10px" }}>
+        <Grid container sx={{ marginTop: "10px", minHeight: "2.5rem" }}>
           <Grid item md={4} sm={4}>
             Nutrition Assessment:
           </Grid>
           <Grid item md={8} sm={8}>
-            <Grid container sx={{ backgroundColor: "white" }}>
+            <Grid
+              container
+              sx={{ backgroundColor: "white", minHeight: "2.5rem" }}
+            >
               <NutritionalButton />
             </Grid>
           </Grid>

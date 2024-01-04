@@ -13,15 +13,13 @@ function History() {
   });
   console.log(input);
   return (
-    <Box sx={{ }}>
-      <Box sx={{ paddingX: "1rem", marginTop: "1px", marginBottom: "15px" }}>
-        <div style={{ padding: "1rem" }}>
-          <Opthalmic />
-          <Systematic />
-          <Medical />
-          <Paeditric />
-        </div>
-      </Box>
+    <Box sx={{ marginTop: "1px", marginBottom: "15px" }}>
+      <div style={{ padding: "1rem" }}>
+        <Opthalmic />
+        <Systematic />
+        <Medical />
+        <Paeditric />
+      </div>
     </Box>
   );
 }
