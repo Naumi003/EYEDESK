@@ -26,6 +26,7 @@ function ButtonComp({
 
           //   clipPath: 'polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%)'
         }}
+     
         variant="contained"
         onClick={onClick}
       >

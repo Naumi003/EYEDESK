@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, Grid, TextField, Typography } from "@mui/material";
-import Button from "./Button";
+import { OpthalmicButton } from "./Button";
 
 function Opthalmic() {
   const [input, setInput] = useState({
@@ -26,172 +26,12 @@ function Opthalmic() {
       <Grid
         container
         sx={{
-          border: "1px solid gray",
-          // textAlign: "center",
-          // display: "flex",
-          // alignItems: "center",
-          // justifyContent: "center",
-          
-          backgroundColor: "white",
+          height: "100%",
+          // backgroundColor: "white",
         }}
-        // spacing={"0.1rem"}
       >
-        {/* <Grid
-          item
-          md={1}
-          sm={1.71}
-          sx={{
-            fontSize: { md: "0.75rem", sm: "0.50rem" },
-            fontWeight: "600",
-            textAlign: "center",
-            display: "flex",
-            alignItems: "center",
-            borderRight: "1px solid gray",
-            justifyContent: "center",
-            backgroundColor:
-              input.index === 1 ? input.backgroundColor : "white",
-          }}
-          onClick={() => {
-            const current = { ...input };
-            current.index = 1;
-            setInput(current);
-          }}
-        >
-          Glaucoma
-        </Grid>
-        <Grid
-          item
-          md={2.88}
-          sm={3}
-          sx={{
-            fontSize: { md: "0.75rem", sm: "0.50rem" },
-            fontWeight: "600",
-            textAlign: "center",
-            borderRight: "1px solid gray",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            backgroundColor: input.index === 2 && input.backgroundColor,
-          }}
-          onClick={() => {
-            const current = { ...input };
-            current.index = 2;
-            setInput(current);
-          }}
-        >
-          Retinal Detachment
-        </Grid>
-        <Grid
-          item
-          md={1}
-          sm={1}
-          sx={{
-            fontSize: { md: "0.75rem", sm: "0.50rem" },
-            fontWeight: "600",
-            textAlign: "center",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            borderRight: "1px solid gray",
-            backgroundColor: input.index === 3 && input.backgroundColor,
-          }}
-          onClick={() => {
-            const current = { ...input };
-            current.index = 3;
-            setInput(current);
-          }}
-        >
-          Glass
-        </Grid>
-        <Grid
-          item
-          md={1.88}
-          sm={1.71}
-          sx={{
-            fontSize: { md: "0.75rem", sm: "0.50rem" },
-            fontWeight: "600",
-            textAlign: "center",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            borderRight: "1px solid gray",
-            backgroundColor: input.index === 4 && input.backgroundColor,
-          }}
-          onClick={() => {
-            const current = { ...input };
-            current.index = 4;
-            setInput(current);
-          }}
-        >
-          Eye Disease
-        </Grid>
-        <Grid
-          item
-          md={1.88}
-          sm={1.71}
-          sx={{
-            fontSize: { md: "0.75rem", sm: "0.50rem" },
-            fontWeight: "600",
-            textAlign: "center",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            borderRight: "1px solid gray",
-            backgroundColor: input.index === 5 && input.backgroundColor,
-          }}
-          onClick={() => {
-            const current = { ...input };
-            current.index = 5;
-            setInput(current);
-          }}
-        >
-          Eye Surgery
-        </Grid>
-        <Grid
-          item
-          md={1}
-          sm={1}
-          sx={{
-            fontSize: { md: "0.75rem", sm: "0.50rem" },
-            fontWeight: "600",
-            textAlign: "center",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            borderRight: "1px solid gray",
-            backgroundColor: input.index === 6 && input.backgroundColor,
-          }}
-          onClick={() => {
-            const current = { ...input };
-            current.index = 6;
-            setInput(current);
-          }}
-        >
-          Uveitis
-        </Grid>
-        <Grid
-          item
-          md={1.88}
-          sm={1.71}
-          sx={{
-            fontSize: { md: "0.75rem", sm: "0.50rem" },
-            fontWeight: "600",
-            textAlign: "center",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            //   borderRight: "1px solid gray",
-            backgroundColor: input.index === 7 && input.backgroundColor,
-          }}
-          onClick={() => {
-            const current = { ...input };
-            current.index = 7;
-            setInput(current);
-          }}
-        >
-          Retinal Laser
-        </Grid> */}
-        <Button/>
+
+        <OpthalmicButton />
       </Grid>
       <Box
         sx={{

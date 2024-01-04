@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import { Box, Grid, TextField, Typography } from "@mui/material";
+import { SystemicButton } from './Button';
 
 function Systematic() {
-    const [input, setInput] = useState({
-      index: 0,
-      backgroundColor: "#1757C2",
-      color: "white",
-    });
-    console.log(input);
+  const [input, setInput] = useState({
+    index: 0,
+    backgroundColor: "#1757C2",
+    color: "white",
+  });
+  console.log(input);
   return (
     <>
       <Box sx={{ marginTop: "5px" }}>
@@ -22,7 +23,7 @@ function Systematic() {
         >
           Systemic History
         </Typography>
-        <Grid
+        {/* <Grid
           container
           sx={{
             backgroundColor: "white",
@@ -32,8 +33,8 @@ function Systematic() {
           }}
           // paddingY={"2px"}
           rowSpacing={"0.5rem"}
-        >
-          <Grid
+        > */}
+        {/* <Grid
             item
             md={1.5}
             sm={1.3}
@@ -541,8 +542,20 @@ function Systematic() {
             }}
           >
             Benign Prostatic Hyperplasia ( BPH )
-          </Grid>
+          </Grid> */}
+
+        <Grid
+          container
+          sx={{
+            height: "100%",
+            // backgroundColor: "white",
+          }}
+
+        >
+
+          <SystemicButton />
         </Grid>
+        {/* </Grid> */}
       </Box>
       <Box
         sx={{
