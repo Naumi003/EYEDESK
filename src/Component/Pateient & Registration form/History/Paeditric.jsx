@@ -69,7 +69,7 @@ function Paeditric() {
               Immunization Assesment:
             </Typography>
           </Grid>
-          <ImmunizationButton />
+          <ImmunizationButton Array={["Complete", "Pending"]} />
         </Grid>
         <Grid container marginTop={"10px"}>
           <Grid item md={4} sm={4}>

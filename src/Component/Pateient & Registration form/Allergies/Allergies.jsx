@@ -12,21 +12,27 @@ function Allergies() {
   });
 
   return (
-    <Box sx={{  }}>
-      <Box sx={{ paddingX: "1rem", paddingTop: "1rem", marginBottom: "15px" }}>
+    // <Box sx={{}}>
+      <Box
+        sx={{
+          // paddingX: "1rem",
+          // paddingTop: "1rem",
+          marginBottom: "15px",
+          overflowY: "auto",
+          height: "100%",
+        }}
+      >
         <div
           style={{
             padding: "1rem",
           }}
         >
-          {/* //   ---------{second container}//// */}
           <Drug />
-          {/* Third container */}
           <Contact />
           <Food />
         </div>
       </Box>
-    </Box>
+    // </Box>
   );
 }
 

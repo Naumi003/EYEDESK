@@ -2,6 +2,7 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
 import ButtonComp from "../../ButtonComp";
+// import { ImmunizationButton } from "../Pateient & Registration form/History/Button";
 // import ButtonComp from "../MiniComp/ButtonComp";
 
 export function OpthalmicButton() {
@@ -117,27 +118,32 @@ export function NutritionalButton() {
   );
 }
 
-export function ImmunizationButton() {
-  const Array = ["Complete", "Pending"];
-
+export function ImmunizationButton({ Array, padding, onclick, bgcolor }) {
   return (
     <>
       {Array.map((key, i) => {
         return (
-          <Grid item key={i} sx={{ marginTop: "0.05rem" }}>
-            <ButtonComp
-              sx={{
-                width: "auto",
-                fontSize: "10px",
-                height: "100%",
-                bgcolor: "white",
-                color: "black",
-                borderRadius: "0%",
-                border: "1px solid gray",
-              }}
-              label={key}
-            />
-          </Grid>
+          <>
+            {/* <button onClick={onclick} style={{ padding }}>
+              {Array.join(", ")}
+            </button> */}
+            <Grid item key={i} sx={{ marginTop: "0.05rem" }}>
+              <ButtonComp
+                width={"100%"}
+                sx={{
+                  fontSize: "10px",
+                  // height: "auto",
+                  color: "black",
+                  borderRadius: "0%",
+                  border: "1px solid gray",
+                  padding: { padding },
+                  bgcolor: { bgcolor },
+                }}
+                label={key}
+                onclick={() => onclick(key)}
+              />
+            </Grid>
+          </>
         );
       })}
     </>

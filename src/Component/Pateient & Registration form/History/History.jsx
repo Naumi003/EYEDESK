@@ -13,8 +13,15 @@ function History() {
   });
   console.log(input);
   return (
-    <Box sx={{ marginTop: "1px", marginBottom: "15px" }}>
-      <div style={{ padding: "1rem" }}>
+    <Box
+      sx={{
+        marginTop: "1px",
+        marginBottom: "15px",
+        overflowY: "auto",
+        height: "100%",
+      }}
+    >
+      <div style={{ padding: "1rem"}}>
         <Opthalmic />
         <Systematic />
         <Medical />

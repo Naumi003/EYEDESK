@@ -16,6 +16,7 @@ export function Drugbutton() {
         return (
           <Grid item key={i}>
             <ButtonComp
+            
               label={key}
               sx={{
                 width: "auto",

@@ -11,7 +11,8 @@ const theme = createTheme({
         }
       },
       defaultProps: {
-        size: "small"
+        size: "small",
+        // sx={height:"20px"}
       }
     }
   }

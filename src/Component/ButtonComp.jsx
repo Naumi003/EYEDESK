@@ -5,14 +5,30 @@ import React from "react";
 function ButtonComp({
   sx,
   label,
-  onClick,
+  onclick,
+  backgroundColor = "white",
+  color = "black",
+  width = "auto",
 }) {
   return (
     <>
       <Button
-        sx={sx}
+        sx={{
+          ...sx,
+          backgroundColor: { backgroundColor },
+          color: { color },
+          width: { width },
+
+          "&:hover": {
+            color: "white",
+          },
+
+          "&:active": {
+            color: "white",
+          },
+        }}
         variant="contained"
-        // onClick={onClick}
+        onClick={onclick}
       >
         {label}
       </Button>

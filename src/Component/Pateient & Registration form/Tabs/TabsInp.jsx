@@ -1,5 +1,5 @@
 import logo from "../../../logo.svg";
-import "../../../App.css";
+// import "../../../App.css";
 import React, { useState } from "react";
 import { styled } from "@mui/system";
 import { Tabs } from "@mui/base/Tabs";
@@ -19,6 +19,7 @@ import Othedetails from "../OtherDetails/Othedetails";
 import History from "../History/History";
 import Allergies from "../Allergies/Allergies";
 import Navigation from "../Navigation/Navigation";
+// import"../../../../src/
 
 function App() {
   const white = {
@@ -101,7 +102,9 @@ function App() {
       <Box sx={{ paddingX: "1rem", marginX: "0.5rem" }}>
         <ThemeProvider theme={theme}>
           <div className="App">
-            <h1>Patient Registration & Appointment Form</h1>
+            <h1 style={{ textAlign: "center" }}>
+              Patient Registration & Appointment Form
+            </h1>
           </div>
 
           <Grid
@@ -129,7 +132,7 @@ function App() {
               <Box
                 sx={{
                   borderBottom: "1px solid gray",
-                   height: "48.5px",
+                  height: "48.5px",
                   // paddingLeft:"150px",
                   display: "flex",
                   justifyContent: "center",

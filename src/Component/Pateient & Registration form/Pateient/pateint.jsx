@@ -82,10 +82,11 @@ function Pateint() {
               <Grid item sx={4} xs={12} sm={12} md={4} lg={4}>
                 <TextField
                   fullWidth
+                  // minHeight
                   id="outlined-basic"
                   label="First Name "
                   variant="outlined"
-                  sx={{ backgroundColor: "white", borderRadius: "0.7rem" }}
+                  sx={{ backgroundColor: "white", borderRadius: "0.7rem",minWidth:"1rem" }}
                 />
               </Grid>
               <Grid item sx={4} xs={12} sm={12} md={4} lg={4}>

@@ -9,7 +9,7 @@ import Othedetails from "../OtherDetails/Othedetails";
 import History from "../History/History";
 import Allergies from "../Allergies/Allergies";
 import { Grid } from "@mui/material";
-import "../../../App.css";
+// import "../../../App.css";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -143,10 +143,14 @@ export default function BasicTabs() {
           <Othedetails />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
-          <History />
+          <div className="" style={{ height: "70vh", overflow: "hidden" }}>
+            <History />
+          </div>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={3}>
-          <Allergies />
+          <div className="" style={{ height: "70vh", overflow: "hidden" }}>
+            <Allergies />
+          </div>
         </CustomTabPanel>
       </Box>
     </>

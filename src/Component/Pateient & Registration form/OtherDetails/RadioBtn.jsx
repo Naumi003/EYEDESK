@@ -18,26 +18,26 @@ export default function RadioBtn() {
         <Grid container>
           <Grid item sm={6} md={3}>
             <Stack flexDirection={"column"}>
-              <FormControlLabel value="female" control={<Radio />} label="O+" />
-              <FormControlLabel value="male" control={<Radio />} label="A+" />
+              <FormControlLabel value="O+" control={<Radio />} label="O+" />
+              <FormControlLabel value="A+" control={<Radio />} label="A+" />
             </Stack>
           </Grid>
           <Grid item sm={6} md={3}>
             <Stack flexDirection={"column"}>
-              <FormControlLabel value="female" control={<Radio />} label="O-" />
-              <FormControlLabel value="male" control={<Radio />} label="A-" />
+              <FormControlLabel value="O-" control={<Radio />} label="O-" />
+              <FormControlLabel value="A-" control={<Radio />} label="A-" />
             </Stack>
           </Grid>
           <Grid item sm={6} md={3}>
             <Stack flexDirection={"column"}>
-              <FormControlLabel value="female" control={<Radio />} label="B+" />
-              <FormControlLabel value="male" control={<Radio />} label="AB+" />
+              <FormControlLabel value="B+" control={<Radio />} label="B+" />
+              <FormControlLabel value="AB+" control={<Radio />} label="AB+" />
             </Stack>
           </Grid>
           <Grid item sm={6} md={3}>
             <Stack flexDirection={"column"}>
-              <FormControlLabel value="female" control={<Radio />} label="B-" />
-              <FormControlLabel value="male" control={<Radio />} label="AB-" />
+              <FormControlLabel value="B-" control={<Radio />} label="B-" />
+              <FormControlLabel value="AB-" control={<Radio />} label="AB-" />
             </Stack>
           </Grid>
         </Grid>
