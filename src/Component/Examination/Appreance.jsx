@@ -53,6 +53,13 @@ function Appreance() {
   };
 
   console.log(transcriptStates);
+  const handleTranscriptChange = (e) => {
+    console.log(e.target.value);
+    let data = [...transcriptStates];
+    data[0] = e.target.value;
+    console.log(data);
+    setTranscriptStates(data);
+  };
 
   const [alignment, setAlignment] = React.useState({
     bulbi: "false",
@@ -72,13 +79,7 @@ function Appreance() {
 
   console.log(transcript);
 
-  const handleTranscriptChange = (e) => {
-    console.log(e.target.value);
-    let data = [...transcriptStates];
-    data[0] = e.target.value;
-    console.log(data);
-    setTranscriptStates(data);
-  };
+  
 
   return (
     <>
