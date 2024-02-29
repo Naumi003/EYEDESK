@@ -11,6 +11,7 @@ function TextFieldInp({
   mdFontSize,
   lgFontSize,
   value,
+  oninput,
 }) {
   return (
     <>
@@ -25,6 +26,7 @@ function TextFieldInp({
         label={label}
         variant="outlined"
         disabled={disabled}
+        onClick={oninput}
         sx={{
           width: { width },
           fontSize: { fontSize },

@@ -5,17 +5,17 @@ const initialState = {
     {
       sph: "",
       cyl: "",
-      Axis: "",
+      axis: "",
     },
     {
       sph: "",
       cyl: "",
-      Axis: "",
+      axis: "",
     },
     {
       sph: "",
       cyl: "",
-      Axis: "",
+      axis: "",
     },
   ],
   rodDilated: [
@@ -69,6 +69,11 @@ const initialState = {
       Axis: "",
     },
   ],
+  indicator: {
+    state: "setRodDry",
+    index: 0,
+    col: 'sph'
+  },
 };
 console.log(initialState.RodDry);
 
@@ -81,9 +86,27 @@ export const todoslice = createSlice({
       console.log(action.payload);
       // console.log(state.positiveRefraction);
     },
+    setRodDilated: (state, action) => {
+      state.rodDilated = action.payload;
+      console.log(action.payload);
+      // console.log(state.positiveRefraction);
+    },
+    setLosDry: (state, action) => {
+      state.losDry = action.payload;
+      console.log(action.payload);
+      // console.log(state.positiveRefraction);
+    },
+    setLosDilated: (state, action) => {
+      state.losDilated = action.payload;
+      console.log(action.payload);
+      // console.log(state.positiveRefraction);
+    },
+    setIndicator: (state, action) => {
+      state.indicator = action.payload;
+    },
   },
 });
 
-export const { setRodDry } = todoslice.actions;
+export const { setRodDry, setRodDilated, setLosDry, setLosDilated, setIndicator } = todoslice.actions;
 
 export default todoslice.reducer;

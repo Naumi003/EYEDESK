@@ -6,12 +6,12 @@ import ButtonComp from "../ButtonComp";
 import TextFieldInp from "../Modaal/TextFieldInp";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  setIndicator,
   setPositiveRefraction,
   setRodDry,
 } from "../../features/Todo/todoSlice";
 
-export function SphPositiveMaping() {
-  const dispatch = useDispatch();
+export function SphPositiveMaping({ onclick }) {
   // const positiveRefraction = useSelector(
   //   (state) => state.todoReducer.positiveRefraction
   // );
@@ -21,8 +21,8 @@ export function SphPositiveMaping() {
   const end = 25.0;
   const increment = 0.25;
   const numbersArray = [];
-  const prevInitialState = useSelector((state) =>  state.rodDry)
-  const values = [{sph : value1, cyl : value2, axis : value3}]
+  const prevInitialState = useSelector((state) => state.rodDry);
+  // const values = [{sph : value1, cyl : value2, axis : value3}]
 
   for (let i = start; i <= end; i += increment) {
     numbersArray.push("+" + i.toFixed(2));
@@ -30,7 +30,7 @@ export function SphPositiveMaping() {
 
   const onSet = (params) => {
     setValue(params);
-    dispatch(setRodDry([{values}]));
+    // dispatch(setRodDry());
   };
 
   return (
@@ -41,9 +41,7 @@ export function SphPositiveMaping() {
             <Grid item md={0.705} sm={1} key={i}>
               <ButtonComp
                 width={"100%"}
-                onclick={() => {
-                  onSet(key);
-                }}
+                onclick={() => onclick(key)}
                 label={key}
                 color={"black"}
                 backgroundColor={"white"}
@@ -319,7 +317,8 @@ export function UcvaSecondMaping() {
 
 // ********Four and Five Column inp Table********
 
-export function FourColInpTable({ inpLabel, value }) {
+export function FourColInpTable({ label, inpLabel, value }) {
+  const dispatch = useDispatch();
   return (
     <>
       <Grid container bgcolor={"#e6efff"} boxSizing={"border-box"}>
@@ -355,13 +354,70 @@ export function FourColInpTable({ inpLabel, value }) {
                 />
               </Grid>
               <Grid item md={3} sm={3}>
-                <TextFieldInp backgroundColor={"white"} />
+                <TextFieldInp
+                  backgroundColor={"white"}
+                  value={key?.sph}
+                  oninput={() =>
+                    dispatch(
+                      setIndicator({
+                        state:
+                          label === "R" && inpLabel === "Dry"
+                            ? "setRodDry"
+                            : label === "R" && inpLabel === "Dilated"
+                            ? "setRodDilated"
+                            : label === "L" && inpLabel === "Dry"
+                            ? "setLosDry"
+                            : "setLosDilated",
+                        index: i,
+                        col: "sph",
+                      })
+                    )
+                  }
+                />
               </Grid>
               <Grid item md={3} sm={3}>
-                <TextFieldInp backgroundColor={"white"} />
+                <TextFieldInp
+                  backgroundColor={"white"}
+                  value={key?.cyl}
+                  oninput={() =>
+                    dispatch(
+                      setIndicator({
+                        state:
+                          label === "R" && inpLabel === "Dry"
+                            ? "setRodDry"
+                            : label === "R" && inpLabel === "Dilated"
+                            ? "setRodDilated"
+                            : label === "L" && inpLabel === "Dry"
+                            ? "setLosDry"
+                            : "setLosDilated",
+                        index: i,
+                        col: "cyl",
+                      })
+                    )
+                  }
+                />
               </Grid>
               <Grid item md={3} sm={3}>
-                <TextFieldInp backgroundColor={"white"} />
+                <TextFieldInp
+                  backgroundColor={"white"}
+                  value={key?.axis}
+                  oninput={() =>
+                    dispatch(
+                      setIndicator({
+                        state:
+                          label === "R" && inpLabel === "Dry"
+                            ? "setRodDry"
+                            : label === "R" && inpLabel === "Dilated"
+                            ? "setRodDilated"
+                            : label === "L" && inpLabel === "Dry"
+                            ? "setLosDry"
+                            : "setLosDilated",
+                        index: i,
+                        col: "axis",
+                      })
+                    )
+                  }
+                />
               </Grid>
             </>
           ))

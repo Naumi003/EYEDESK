@@ -118,7 +118,18 @@ export function NutritionalButton() {
   );
 }
 
-export function ImmunizationButton({ Array, padding, onclick, bgcolor }) {
+export function ImmunizationButton({
+  Array,
+  padding,
+  onclick,
+  bgcolor,
+  borderRadius,
+  display,
+  textAlign,
+  justifyContent,
+  minwidth,
+  fontWeight,
+}) {
   return (
     <>
       {Array.map((key, i) => {
@@ -133,11 +144,16 @@ export function ImmunizationButton({ Array, padding, onclick, bgcolor }) {
                 sx={{
                   fontSize: "10px",
                   // height: "auto",
-                  color: "black",
-                  borderRadius: "0%",
+                  color: "white",
+                  borderRadius: { borderRadius },
                   border: "1px solid gray",
                   padding: { padding },
                   bgcolor: { bgcolor },
+                  display: { display },
+                  textAlign: { textAlign },
+                  justifyContent: { justifyContent },
+                  minwidth: { minwidth },
+                  fontWeight: { fontWeight },
                 }}
                 label={key}
                 onclick={() => onclick(key)}

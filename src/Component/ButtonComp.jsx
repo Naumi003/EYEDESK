@@ -9,6 +9,7 @@ function ButtonComp({
   backgroundColor = "white",
   color = "black",
   width = "auto",
+  minwidth="0",
 }) {
   return (
     <>
@@ -18,6 +19,7 @@ function ButtonComp({
           backgroundColor: { backgroundColor },
           color: { color },
           width: { width },
+          minWidth: { minwidth },
 
           "&:hover": {
             color: "white",

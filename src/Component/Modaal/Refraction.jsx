@@ -7,20 +7,27 @@ import {
 } from "./RefractionPrimary (1)";
 import Rod from "../Examination/Rod";
 import {
-  ImmunizationButton,
+   ImmunizationButton,
   SystemicButton,
 } from "../Pateient & Registration form/History/Button";
 import { Drugbutton } from "../Pateient & Registration form/Allergies/Allergiesbutton";
-import { useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
+import {
+  setLosDilated,
+  setLosDry,
+  setRodDilated,
+  setRodDry,
+} from "../../features/Todo/todoSlice";
 
 function Refraction(onclick) {
+  const dispatch = useDispatch();
   const [reflectedContent, setReflectedContent] = useState(null);
   const RodDry = useSelector((state) => state.todoReducer.RodDry);
   const losDry = useSelector((state) => state.todoReducer.losDry);
-  const rodDilated = useSelector((state) => state.todoReducer.rodDilated);
   const losDilated = useSelector((state) => state.todoReducer.losDilated);
-    console.log(RodDry);
+  const rodDilated = useSelector((state) => state.todoReducer.rodDilated);
+  const indicator = useSelector((state) => state.todoReducer.indicator);
+  console.log(RodDry);
   const handleButtonClick = (content) => {
     setReflectedContent((prevContent) =>
       prevContent === content ? null : content
@@ -50,18 +57,27 @@ function Refraction(onclick) {
         <Grid container columnSpacing={"1rem"} paddingX={"0.5rem"}>
           <Grid item md={6} sm={6}>
             <Rod label={"R/OD"} isBtn={false} />
-            <FourColInpTable inpLabel={"Dry"} value={RodDry} />
-            <FourColInpTable inpLabel={"Dilated"} value={rodDilated} />
+            <FourColInpTable label={"R"} inpLabel={"Dry"} value={RodDry} />
+            <FourColInpTable
+              label={"R"}
+              inpLabel={"Dilated"}
+              value={rodDilated}
+            />
           </Grid>
           <Grid item md={6} sm={6}>
             <Rod label={"L/OS"} array={""} isBtn={false} />
             <FourColInpTable
+              label={"L"}
               inpLabel={"Dry"}
               value={losDry}
               // inpLabel={"positiveRefraction.toString()"}
             />
             {/* <FourColInpTable inpLabel={setPositiveRefraction.toString()} /> */}
-            <FourColInpTable inpLabel={"Dilated"} value={losDilated} />
+            <FourColInpTable
+              label={"L"}
+              inpLabel={"Dilated"}
+              value={losDilated}
+            />
           </Grid>
         </Grid>
         <Grid container paddingX={"0.5rem"} marginTop={"10px"}>
@@ -99,7 +115,52 @@ function Refraction(onclick) {
         </Grid>
         {reflectedContent === null ? null : reflectedContent === 1 ? (
           <Grid container marginTop={"10px"} paddingX={"0.5rem"}>
-            <SphPositiveMaping />
+            <SphPositiveMaping
+              onclick={(key) => {
+                let current = [];
+                if (indicator?.state === "setRodDry") {
+                  current = [...RodDry];
+                  console.log(indicator);
+                  const property = indicator?.col;
+                  current[indicator?.index] = {
+                    ...current[indicator?.index],
+                    [property]: key,
+                  };
+                  console.log(current);
+                  dispatch(setRodDry(current));
+                }
+                if (indicator?.state === "setRodDilated") {
+                  current = [...rodDilated];
+                  console.log(indicator);
+                  const property = indicator?.col;
+                  current[indicator?.index] = {
+                    ...current[indicator?.index],
+                    [property]: key,
+                  };
+                  dispatch(setRodDilated(current));
+                }
+                if (indicator?.state === "setLosDry") {
+                  current = [...losDry];
+                  console.log(indicator);
+                  const property = indicator?.col;
+                  current[indicator?.index] = {
+                    ...current[indicator?.index],
+                    [property]: key,
+                  };
+                  dispatch(setLosDry(current));
+                }
+                if (indicator?.state === "setLosDilated") {
+                  current = [...losDilated];
+                  console.log(indicator);
+                  const property = indicator?.col;
+                  current[indicator?.index] = {
+                    ...current[indicator?.index],
+                    [property]: key,
+                  };
+                  dispatch(setLosDilated(current));
+                }
+              }}
+            />
           </Grid>
         ) : (
           <Grid container marginTop={"10px"} paddingX={"0.5rem"}>
